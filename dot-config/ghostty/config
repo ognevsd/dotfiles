@@ -1,6 +1,7 @@
 font-family = JetBrainsMonoNL NFM Regular
-font-size = 16
-theme = Kanagawa Dragon
+font-size = 15
+# theme = Kanagawa Dragon
+theme = catppuccin-latte
 macos-titlebar-style = hidden
 window-padding-y = 5,2
-adjust-cursor-thickness = 3
+adjust-cursor-thickness = 6
