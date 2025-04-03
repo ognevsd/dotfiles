@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+if [[ -x "./tmux-ready" ]]; then
+    ./tmux-ready
+    exit 0
+fi
+
+clear
