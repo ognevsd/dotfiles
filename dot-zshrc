@@ -148,3 +148,9 @@ eval "$(uv generate-shell-completion zsh)"
 # Adding jenv
 eval "$(jenv init -)"
 # jenv enable-plugin export
+
+# Adding personal scripts to PATH
+export PATH="$PATH:$HOME/.local/scripts/"
+
+# Adding zsh_profile
+source ~/.zsh_profile
