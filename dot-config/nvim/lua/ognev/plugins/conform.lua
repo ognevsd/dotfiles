@@ -48,6 +48,7 @@ return { -- Autoformat
 			javascriptreact = { "prettier" },
 			css = { "prettier" },
 			html = { "prettier" },
+			markdown = { "prettier" },
 		},
 	},
 }
