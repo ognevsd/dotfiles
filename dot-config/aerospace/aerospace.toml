@@ -170,3 +170,11 @@ automatically-unhide-macos-hidden-apps = false
 [[on-window-detected]]
     if.app-id = 'com.cisco.secureclient.gui'
     run = 'layout floating'
+
+[[on-window-detected]]
+    if.app-name-regex-substring = 'teams'
+    run = 'move-node-to-workspace 5'
+
+[[on-window-detected]]
+    if.app-name-regex-substring = 'outlook'
+    run = 'move-node-to-workspace 5'
