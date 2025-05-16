@@ -178,3 +178,20 @@ automatically-unhide-macos-hidden-apps = false
 [[on-window-detected]]
     if.app-name-regex-substring = 'outlook'
     run = 'move-node-to-workspace 5'
+
+[[on-window-detected]]
+    if.app-name-regex-substring = 'ghostty'
+    run = 'move-node-to-workspace 1'
+
+[[on-window-detected]]
+    if.app-name-regex-substring = 'slack'
+    run = 'move-node-to-workspace 3'
+
+[[on-window-detected]]
+    if.app-name-regex-substring = 'notes'
+    run = 'move-node-to-workspace 4'
+
+[[on-window-detected]]
+    if.app-name-regex-substring = 'firefox'
+    run = 'move-node-to-workspace 2'
+
