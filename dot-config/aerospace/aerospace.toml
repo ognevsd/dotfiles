@@ -169,7 +169,7 @@ automatically-unhide-macos-hidden-apps = false
 
 [[on-window-detected]]
     if.app-id = 'com.cisco.secureclient.gui'
-    run = 'layout floating'
+    run = 'layout tiling'
 
 [[on-window-detected]]
     if.app-name-regex-substring = 'teams'
@@ -195,3 +195,6 @@ automatically-unhide-macos-hidden-apps = false
     if.app-name-regex-substring = 'firefox'
     run = 'move-node-to-workspace 2'
 
+[[on-window-detected]]
+    if.app-name-regex-substring = 'chrome'
+    run = 'move-node-to-workspace 2'
