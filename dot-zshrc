@@ -154,3 +154,14 @@ export PATH="$PATH:$HOME/.local/scripts/"
 
 # Adding zsh_profile
 source ~/.zsh_profile
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/sog002/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/sog002/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/sog002/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/sog002/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/sog002/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
