@@ -128,6 +128,8 @@ eval "$(pyenv init -)"
 # My aliases
 alias lg='lazygit'
 alias lzd='lazydocker'
+alias dcu="docker compose up -d --build"
+alias dcd="docker compose down"
 
 # Adding to path
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
