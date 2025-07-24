@@ -1,7 +1,7 @@
 return {
 	-- Main LSP Configuration
 	"neovim/nvim-lspconfig",
-	version = "1.7.0",
+	version = "2.3.0",
 	event = "VeryLazy",
 	dependencies = {
 		-- Automatically install LSPs and related tools to stdpath for Neovim
@@ -165,6 +165,7 @@ return {
 		local servers = {
 			-- clangd = {},
 			gopls = {},
+			ty = {},
 			ruff = {},
 			pyright = {
 				filetypes = { "python" },
@@ -250,6 +251,15 @@ return {
 				-- },
 			},
 		})
+
+		-- require("lspconfig").ty.setup( {
+		-- 	default_config = {
+		-- 		cmd = { "ty", "lsp" },
+		-- 		filetypes = { "python" },
+		-- 		root_dir = require("lspconfig").util.root_pattern("pyproject.toml", ".git"),
+		-- 	},
+		-- })
+		-- vim.lsp.enable('ty')
 
 		require("lspconfig").yamlls.setup({
 			settings = {
