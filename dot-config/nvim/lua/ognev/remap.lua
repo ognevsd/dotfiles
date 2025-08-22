@@ -21,6 +21,7 @@ vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
 -- Diagnostic keymaps
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
+vim.keymap.set("n", "<leader>dm", vim.diagnostic.open_float, { desc = "Show diagnostic messge" })
 
 -- Move highlighted line
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
