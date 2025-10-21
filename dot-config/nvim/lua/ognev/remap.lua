@@ -15,6 +15,12 @@ vim.keymap.set("n", "<down>", '<cmd>echo "Use j to move!!"<CR>')
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
+-- Zk mapping
+vim.keymap.set("v", "<leader>zn", ":'<,'>ZkNewFromTitleSelection<CR>", { desc = "Create note from selection" })
+vim.keymap.set("n", "<leader>zl", "<Cmd>ZkLinks<CR>", { desc = "Insert link to note" })
+vim.keymap.set("n", "<leader>zb", "<Cmd>ZkBacklinks<CR>", { desc = "Show backlinks" })
+vim.keymap.set("n", "<leader>zt", "<Cmd>ZkTags<CR>", { desc = "Browse by tags" })
+
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
