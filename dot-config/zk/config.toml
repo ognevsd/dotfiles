@@ -29,6 +29,10 @@ id-length = 8
 # Letter case for the random IDs.
 id-case = "lower"
 
+[format.markdown]
+link-drop-extension = false
+link-encode-path = false
+
 # EXTRA VARIABLES
 [extra]
 author = "Sergey"
