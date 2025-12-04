@@ -42,6 +42,7 @@ vim.keymap.set("n", "<leader>d", '"_d') -- Delete to void register
 vim.keymap.set("v", "<leader>d", '"_d') -- Delete to void register
 
 vim.keymap.set("n", "Q", "<nop>")
+vim.keymap.set("i", "<C-u>", "<nop>")
 
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]]) -- Start changing the word you're on
 
