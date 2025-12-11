@@ -19,3 +19,10 @@ To install run:
 ```bash
 git clone https://github.com/lukechilds/zsh-nvm ~/.oh-my-zsh/custom/plugins/zsh-nvm
 ```
+
+## Packages
+
+Following package is needed to render latex in neovim
+```
+brew install utftex tree-sitter
+```
