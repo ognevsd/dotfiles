@@ -164,13 +164,41 @@ return {
 		local servers = {
 			-- clangd = {},
 			gopls = {},
-			ty = {},
-			ruff = {},
+			-- ty = {},
+			ruff = {
+				init_options = {
+					settings = {
+						lineLength = 80,
+					},
+				},
+			},
 			pyright = {
 				filetypes = { "python" },
+				settings = {
+					pyright = {
+						-- Using Ruff's import organizer
+						disableOrganizeImports = true,
+					},
+					-- python = {
+					-- 	analysis = {
+					-- 		-- Ignore all files for analysis to exclusively use Ruff for linting
+					-- 		ignore = { "*" },
+					-- 	},
+					-- },
+				},
 			},
 			yamlls = {
 				filetypes = { "yaml" },
+				settings = {
+					yaml = {
+						schemas = {
+							["https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json"] = "docker-compose.yaml",
+						},
+						format = {
+							enable = true,
+						},
+					},
+				},
 			},
 			-- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
 			--
@@ -225,51 +253,6 @@ return {
 					server.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
 					require("lspconfig")[server_name].setup(server)
 				end,
-			},
-		})
-
-		require("lspconfig").ruff.setup({
-			init_options = {
-				settings = {
-					lineLength = 80,
-				},
-			},
-		})
-
-		require("lspconfig").pyright.setup({
-			settings = {
-				pyright = {
-					-- Using Ruff's import organizer
-					disableOrganizeImports = true,
-				},
-				-- python = {
-				-- 	analysis = {
-				-- 		-- Ignore all files for analysis to exclusively use Ruff for linting
-				-- 		ignore = { "*" },
-				-- 	},
-				-- },
-			},
-		})
-
-		-- require("lspconfig").ty.setup( {
-		-- 	default_config = {
-		-- 		cmd = { "ty", "lsp" },
-		-- 		filetypes = { "python" },
-		-- 		root_dir = require("lspconfig").util.root_pattern("pyproject.toml", ".git"),
-		-- 	},
-		-- })
-		-- vim.lsp.enable('ty')
-
-		require("lspconfig").yamlls.setup({
-			settings = {
-				yaml = {
-					schemas = {
-						["https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json"] = "docker-compose.yaml",
-					},
-					format = {
-						enable = true,
-					},
-				},
 			},
 		})
 	end,
