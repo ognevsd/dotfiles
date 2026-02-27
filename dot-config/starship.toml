@@ -4,10 +4,10 @@
 add_newline = false
 
 format = """
-$character\
 $directory\
 $git_branch\
-$git_status"""
+$python\
+\n$character"""
 
 [character]
 success_symbol = "[➜](bold green) "
@@ -17,10 +17,11 @@ error_symbol = "[➜](bold red) "
 symbol = 'git'
 format = '[$symbol:\([$branch](bold red)\)](bold blue) '
 
-[git_status]
-# style = "bold yellow"
-disabled = true
-
 [directory]
 truncation_length = 1
+
+[python]
+# Show just "(venvname)" when a venv is active, nothing otherwise
+format = "[$symbol(\\($virtualenv\\))]($style) "
+style = "bold yellow"
 
