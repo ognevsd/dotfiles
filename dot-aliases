@@ -1,0 +1,8 @@
+# My aliases
+alias la='ls -Alh'
+
+alias lg='lazygit'
+alias lzd='lazydocker'
+alias dcu="docker compose up -d --build"
+alias dcd="docker compose down"
+
