@@ -1,2 +1,4 @@
 export XDG_CONFIG_HOME=$HOME/.config
+bindkey -e # Switch to emacs keymap (restores Ctrl+A, Ctrl+E, etc.)
+
 bindkey -s ^f "tmux-sessionizer\n"
