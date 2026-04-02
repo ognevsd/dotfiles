@@ -255,5 +255,12 @@ return {
 				end,
 			},
 		})
+
+		require("lspconfig").sourcekit.setup({
+			capabilities = capabilities,
+			cmd = { "xcrun", "sourcekit-lsp" },
+			filetypes = { "swift" },
+			root_dir = require("lspconfig.util").root_pattern("Package.swift", ".git"),
+		})
 	end,
 }
