@@ -1,0 +1,9 @@
+{
+  "shortcuts": [
+    {
+      "command": "jupyter-ruff:format-all-cells",
+      "keys": ["Option Shift F"],
+      "selector": ".jp-Notebook.jp-mod-editMode"
+    }
+  ]
+}

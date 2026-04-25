@@ -1,0 +1,13 @@
+{
+  "codeCellConfig": {
+    "rulers": [80],
+    "lineNumbers": true,
+    "lineNumbersRelative": true
+  },
+  "markdownCellConfig": {
+    "rulers": [80]
+  },
+  "rawCellConfig": {
+    "rulers": [80]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "editorConfig": {
+    "keyMap": "vim",
+    "rulers": [80],
+    "lineNumbers": true,
+    "lineNumbersRelative": true
+  }
+}
