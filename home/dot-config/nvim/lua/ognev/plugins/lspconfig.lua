@@ -188,11 +188,20 @@ return {
 				},
 			},
 			yamlls = {
-				filetypes = { "yaml" },
+				filetypes = { "yaml", "yml" },
 				settings = {
 					yaml = {
 						schemas = {
 							["https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json"] = "docker-compose.yaml",
+							-- ["file://" .. vim.fn.expand("~/.databricks/databricks-bundle-schema.json")] = {
+							["https://raw.githubusercontent.com/databricks/cli/refs/heads/main/bundle/schema/jsonschema.json"] = {
+								"databricks.yml",
+								"databricks.yaml",
+								"bundle.yml",
+								"bundle.yaml",
+								"**/*.job.yaml",
+								"**/*.job.yml",
+							},
 						},
 						format = {
 							enable = true,
