@@ -165,3 +165,6 @@ zstyle ':completion:*' menu select
 if [ -f ~/.aliases ]; then
   source ~/.aliases
 fi
+
+# Initialize fnm
+eval "$(fnm env --use-on-cd)"
