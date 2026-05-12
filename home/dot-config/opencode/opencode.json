@@ -1,0 +1,36 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "enabled_providers": [
+    "github-copilot"
+  ],
+  "permission": {
+    "*": "ask",
+    "read": "allow",
+    "edit": {
+      "*": "allow",
+      "**/opencode.json": "ask"
+    },
+    "bash": {
+      "*": "ask",
+      "terraform fmt *": "allow",
+      "terraform plan *": "allow",
+      "terraform validate *": "allow",
+      "tflint *": "allow"
+    },
+    "grep": "allow",
+    "glob": "allow",
+    "list": "allow",
+    "lsp": "allow",
+    "skill": "ask",
+    "task": "allow",
+    "todowrite": "allow",
+    "todoread": "allow",
+    "webfetch": "ask",
+    "websearch": "ask",
+    "codesearch": "allow",
+    "external_directory": "ask",
+    "doom_loop": "ask"
+  },
+  "share": "disabled",
+  "mcp": { }
+}
